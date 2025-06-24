@@ -1,0 +1,114 @@
+﻿# Player: Laggy/Icarus Nightflitter
+
+- type: entity
+  parent: PillCanister
+  id: PersonalItemIcarusPills
+  name: Dubious pills
+  description: A pill bottle with a scratched out label
+  suffix: PersonalItem
+  components:
+  - type: Label
+    currentLabel: Icarus's Pill
+  - type: StorageFill
+    contents:
+    - id: PillIcarusLE
+      amount: 2
+    - id: PillIcarusTFR
+      amount: 1
+    - id: PillIcarusNDD
+      amount: 1
+    - id: PillIcarusEKE
+      amount: 1
+    - id: PillIcarusBSS
+      amount: 1
+  - type: DetailExaminable
+    content: It has a note scratched in the side that says "The debt has been paid. Good luck."
+
+- type: loadout
+  id: PersonalItemIcarusPills
+  storage:
+    back:
+    - PersonalItemIcarusPills
+  effects:
+  - !type:PersonalItemLoadoutEffect
+    character:
+    - Icarus Nightflitter
+
+
+
+- type: entity
+  name: pill
+  parent: Pill
+  id: PillIcarusBase
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 2
+        reagents:
+        - ReagentId: IcarusChemCBR
+          Quantity: 1
+
+- type: entity
+  name: pill
+  parent: PillIcarusBase
+  id: PillIcarusLE
+  components:
+  - type: Sprite
+    state: pill5
+  - type: Label
+    currentLabel: Icarus's pills (LE-M3)
+
+- type: entity
+  name: pill
+  parent: PillIcarusBase
+  id: PillIcarusTFR
+  components:
+  - type: Sprite
+    state: pill5
+  - type: Label
+    currentLabel: Icarus's pills (TFR-D1)
+
+- type: entity
+  name: pill
+  parent: PillIcarusBase
+  id: PillIcarusNDD
+  components:
+  - type: Sprite
+    state: pill5
+  - type: Label
+    currentLabel: Icarus's pills (NDD-20)
+
+- type: entity
+  name: pill
+  parent: PillIcarusBase
+  id: PillIcarusEKE
+  components:
+  - type: Sprite
+    state: pill5
+  - type: Label
+    currentLabel: Icarus's pills (EKE-AD)
+
+- type: entity
+  name: pill
+  parent: PillIcarusBase
+  id: PillIcarusBSS
+  components:
+  - type: Sprite
+    state: pill5
+  - type: Label
+    currentLabel: Icarus's pills (BSS-HM)
+- type: reagent
+  id: IcarusChemIDD
+  name: IDD-UNKNOWN
+  desc: What this chemical is or does is unknown to you.
+  physicalDesc: reagent-physical-desc-acidic
+  flavor: bitter
+  color: "#702991"
+  metabolisms:
+    Food:
+      effects:
+      - !type:PopupMessage
+        type: Local
+        visualType: MediumCaution
+        messages: [ "You briefly feel confused, but the confusion fades away" ]
