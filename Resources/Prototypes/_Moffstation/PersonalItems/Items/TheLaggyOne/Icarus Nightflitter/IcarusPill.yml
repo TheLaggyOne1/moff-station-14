@@ -37,7 +37,7 @@
 
 
 - type: entity
-  name: pill
+  name: Icarus' pill
   parent: Pill
   id: PillIcarusBase
   components:
@@ -46,58 +46,69 @@
       food:
         maxVol: 2
         reagents:
-        - ReagentId: IcarusChemCBR
+        - ReagentId: IcarusChemIDD
           Quantity: 1
 
 - type: entity
-  name: pill
+  name: Icarus' pill
   parent: PillIcarusBase
   id: PillIcarusLE
   components:
+  - type: Pill
+    pillType: 4
   - type: Sprite
     state: pill5
   - type: Label
-    currentLabel: Icarus's pills (LE-M3)
+    currentLabel: LE-M3
 
 - type: entity
-  name: pill
+  name: Icarus' pill
   parent: PillIcarusBase
   id: PillIcarusTFR
   components:
+  - type: Pill
+    pillType: 2
   - type: Sprite
-    state: pill5
+    state: pill3
   - type: Label
-    currentLabel: Icarus's pills (TFR-D1)
+    currentLabel: TFR-D1
 
 - type: entity
-  name: pill
+  name: Icarus' pill
   parent: PillIcarusBase
   id: PillIcarusNDD
   components:
+  - type: Pill
+    pillType: 1
   - type: Sprite
-    state: pill5
+    state: pill2
   - type: Label
-    currentLabel: Icarus's pills (NDD-20)
+    currentLabel: NDD-20
 
 - type: entity
-  name: pill
+  name: Icarus' pill
   parent: PillIcarusBase
   id: PillIcarusEKE
   components:
+  - type: Pill
+    pillType: 15
   - type: Sprite
-    state: pill5
+    state: pill16
   - type: Label
-    currentLabel: Icarus's pills (EKE-AD)
+    currentLabel: EKE-AD
 
 - type: entity
-  name: pill
+  name: Icarus' pill
   parent: PillIcarusBase
   id: PillIcarusBSS
   components:
+  - type: Pill
+    pillType: 0
   - type: Sprite
-    state: pill5
+    state: pill1
   - type: Label
-    currentLabel: Icarus's pills (BSS-HM)
+    currentLabel: BSS-HM
+
 - type: reagent
   id: IcarusChemIDD
   name: IDD-UNKNOWN
